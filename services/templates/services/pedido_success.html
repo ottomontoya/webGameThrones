@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+<body background="{% static 'core/img/wall3.png' %}" style="background-size: cover; background-attachment: fixed;" topmargin="100pt">
+<br><br><br><br><br><br>
+<div class="container">
+    <h1 class="text-white bg-dark p-3">Gracias por su preferencia...</h1>
+</div>
+{% endblock %}
+
+{% block contentJS %}
+    <script>
+        localStorage.clear();
+        show_badge_cart();
+    </script>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% include 'services/menu_services.html'%}
+{% block content %}
+<body background="{% static 'core/img/kingslanding.jpg' %}" style="background-size: cover; background-repeat: no-repeat;">
+<br><br><br>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-9 mx-auto text-light bg-dark p-2 m-4">
+            <div>
+                <form action="" method='post'>
+                    {% csrf_token %}
+                    <p>
+                        El elemento "{{object.title}}" será eliminado.
+                    </p>
+                    <p>¿Está seguro de continuar?</p>
+                    <input type="submit" value="Confirmar">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

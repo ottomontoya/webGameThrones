@@ -1,0 +1,125 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+
+<body background="{% static 'core/img/kingslanding.jpg' %}" style="background-size: cover; background-repeat: no-repeat;">
+  <br><br><br><br><br><br><br>
+  <section class="p-1 m-5 text-white">
+    <div class=" container">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" alt="">
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-dark col-md-auto rounded p-5">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-lower">Contact</span>
+              </h2>
+
+              <!-- Formulario de contacto -->
+                <form action="" method="post">
+                    {% csrf_token %}
+                <div class="form-group">
+                  <label>Name *</label>
+                  <div class="input-group">
+                    {{form.name}}
+                  </div>
+                  {{form.name.errors}}
+                </div>
+                <div class="form-group">
+                  <label>Email *</label>
+                  <div class="input-group">
+                    {{form.email}}
+                  </div>
+                  {{form.email.errors}}
+                </div>
+
+                <br>
+                <select id='select1' class='form-select'>
+                  <option value="0" selected>Codigo Postal:</option>
+                  <option value="1">97130</option>
+                  <option value="2">97135</option>
+                </select>
+                <br>
+                  <select id="select2" class='form-select'>
+                  </select>
+
+                <div class="form-group">
+                  <label>Note *</label>
+                  <div class="input-group">
+                    {{form.content}}
+                  </div>
+                  {{form.content.errors}}
+                </div>
+                <div class="text-center">
+                  <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
+                </div>
+              </form>
+              <!-- Fin formulario de contacto -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block contentJS %}
+<script src='https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js'>
+</script>
+
+<script>
+function csrfSafeMethod(method){
+return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+
+$('#select1').on('change', function() {
+console.log("select1....");
+var valor = this.value;
+var str_json = '{"valor": "' + valor + '" }';
+var obj_json = jQuery.parseJSON(str_json);
+
+$.ajax({
+url:"{% url 'contact:ejecutaAJAX' %}",
+type:"POST",
+dataType:"json",
+data:obj_json,
+beforeSend: function(xhr, settings){
+console.log("beforeSend " + str_json);
+if (!csrfSafeMethod(settings.type) && !this.crossDomain){
+xhr.setRequestHeader("X-CSRFToken", Cookies.get('csrftoken'));
+}
+}
+}).done(function(respuesta, textStatus, jqXHR) {
+console.log("Termina con exito");
+$('#select2').empty()
+if (respuesta['estado']=="correcto"){
+  var opciones = respuesta['opciones'];
+  $.each(opciones, function(k,v) {
+    $('#select2').append($('<option>', {
+        value:k,
+        text:v
+    }));
+  });
+}
+else{
+    $('#select2').append($('<option>', {
+      value:'0',
+      text:respuesta['estado']
+    })); 
+}
+
+}).fail(function(){
+console.log("Falla!!!!!!!!!");
+}).always(function() {
+
+});
+
+});
+
+
+
+</script>
+
+{% endblock %}

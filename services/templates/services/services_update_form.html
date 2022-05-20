@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% include "services/menu_services.html" %}
+{% block content %}
+<body background="{% static 'core/img/kingslanding.jpg' %}" style="background-size: cover; background-repeat: no-repeat;">
+<br><br><br>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-9 mx-auto text-light">
+            <div>
+                {% if 'ok' in request.GET %}
+                    <p class="text-light">
+                        Actualización realizada con éxito.
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'services/services_formulario.html' with btn_description='Actualizar Servicio' %}
+{% endblock %}

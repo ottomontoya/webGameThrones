@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+  {% block content %}
+  {% load static %}
+
+    <!-- Contenido Principal -->
+<body background="{% static 'core/img/kingslanding.jpg' %}" style="background-size: cover; background-repeat: no-repeat;">
+<section>
+  <div class="margen_top container">
+    <div class="row">
+      <div class="col d-sm-block">
+        <div class="container" >
+          {% for services in services %}
+          <!-- Proyecto -->
+          <div class="row services">
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+              <img class="img-fluid mb-3 rounded-circle" src="{{services.image.url}}" alt="" />
+            </div>
+            <div class="col-lg-7 col-md-8">
+              <h2 class="section-heading title">
+              {{services.title}}
+              </h2>
+              <h2>
+              {{services.title2}}
+              </h2>
+              <p>
+              {{services.Date}}
+              </p>
+              <p>
+              {{services.Number}}
+              </p>
+              <p>
+              {{services.description}}
+              <br><br>
+              </p>
+            </div>
+          </div>
+          <br><br><br>
+          {% endfor %}
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br>
+
+  {% endblock %}

@@ -1,0 +1,48 @@
+{% extends "core/base.html" %}
+{% block content %}
+{% load static %}
+<body background="{% static 'core/img/wall3.png' %}" style="background-size: cover; background-attachment: fixed;" topmargin="100pt">
+<br><br><br><br><br><br><br><br><br>
+<div class="container bg-dark p-3 text-white">
+    <div class="row mt-2">
+        <div class="col-md-9 text-white mx-auto mb-1">
+        <table class="table text-white table-striped">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for producto in pedido %}
+                <tr class="text-white">
+                    <th>{{producto.descripcion}}</th>
+                    <th>{{producto.cantidad}}</th>
+                    <th>${{producto.precio}}MXN Precio unitaro</th>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row mt-1">
+    <div class="col-md-9 text-white mx-auto mb-1">
+        <div class="float-end">
+            <span>Total = {{total}}</span>
+        </div>
+    </div>
+
+</div>
+<div class="row mt-1">
+    <div class="col-md-9 mx-auto mb-1">
+        <div class="float-end">
+            <a href="{% url 'services:create_pedido' %}" class="btn text-white form-btn mx-1">
+                <span class="spinner-border spinner-border-sm d-none"></span>
+                <i class="fas fa-paper-plane fa-fw"></i>Confirmar pedido
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

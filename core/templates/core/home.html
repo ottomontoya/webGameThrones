@@ -1,0 +1,190 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% load static %}
+
+
+    <!--el showcase-->
+    <section id="principal">
+        <div class="primary-overlay text-white align-middle ">
+            <div class="container" >
+                <div class="row">
+                    <div id="showcase" class="col-lg-6 text-center align-middle">
+                        <h1 class="display-2 mt-5 pt-5">Get to know the fantastic world</h1>
+                        
+                    </div>
+                    <div id="showcase2" class="col-lg-6 text-center align-middle text-dark">
+                        <h3>Game Of Thrones is medieval fantasy novel where the story narrated by the different characters, each  with his own
+                            point of view
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="segundo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--seccion "casas"-->
+    <section id="houses" class="my-5 text-center mb-0 mt-0">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="info-header mb-5">
+                <h1 class="text-white pb-3">The great houses of westeros</h1>
+                <p class="lead text-white">
+                  These are the main powers throughout the Seven Kingdoms
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/stark.png' %}"
+                    width="50" height="50"
+                    alt=""
+                    class="img-fluid w-50 mb-3"
+                  />
+                  <h3 >Stark</h3>
+                  <p>
+                    Wardens of the North and Lords Winterfell, their words are: "Winter is coming"
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/baratheon.png' %}"
+                    width="50" height="50"
+                    alt=""
+                    class="img-fluid w-50 mb-3"
+                  />
+                  <h3>Baratheon</h3>
+                  <p>
+                    Rulers of the Stormlands and Lords of Storm´s End, and now kings of the Seven Kingdoms, their words are "Ours is the fury"
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/Arryn.png' %}"
+                    width="50" height="50"
+                    alt=""
+                    class="img-fluid w-50 mb-3"
+                  />
+                  <h3>Arryn</h3>
+                  <p>
+                    Wardens of the East and Lords of the Eyrie, they rule the Vale and their words are "As high as honor"
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+          <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/Tully.png' %}"
+                    alt=""
+                    width="50" height="50"
+                    class="img-fluid w-50 mb-3"
+                  />
+                  <h3>Tully</h3>
+                  <p>
+                    Rulers of the Riverlands and Lords of Riverrun, their words are "Family, Duty, Honor"
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+          <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/Lannister.png' %}"
+                    alt=""
+                    width="50" height="50"
+                    class="img-fluid w-50 mb-3"
+                  />
+                  <h3>Lannister</h3>
+                  <p>
+                    Wardens of the West and Lords of Castely Rock, they rule the Westerlands and their words are "Hear me roar"
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+          <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/Targaryen.png' %}"
+                    alt=""
+                    width="50" height="50"
+                    class="img-fluid w-50 mb-4"
+                  />
+                  <h3>Targaryen</h3>
+                  <p>
+                    They used to be the Kings of the Seven Kingdoms, but lost to a rebellion, their words are "Fire and blood"
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/Martell.png' %}"
+                    alt=""
+                    width="50" height="50"
+                    class="img-fluid w-50 mb-3"
+                  />
+                  <h3>Martell</h3>
+                  <p>
+                    Rulers of Dorne and Lords of Sunspear, their words are "Unbowed, Unbent, Unbroken"
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <img
+                    src="{% static 'core/img/Tyrell.png' %}"
+                    alt=""
+                    width="50" height="50"
+                    class="img-fluid w-50 mb-3"
+                  />
+                  <h3>Tyrell</h3>
+                  <p>
+                    Rules of The Reach and lords of Highgarden, their words are "Growing strong"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}

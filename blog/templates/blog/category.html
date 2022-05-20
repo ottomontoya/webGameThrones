@@ -1,0 +1,9 @@
+  {% extends 'core/base.html' %}
+  {% block content %}
+  {% load static %}
+
+  {% for post in category.get_posts.all %}
+    {% include 'blog/blog.html'%}
+  {% endfor %}
+
+  {% endblock %}

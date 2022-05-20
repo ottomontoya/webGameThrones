@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% include 'services/menu_services.html' %}
+<br><br>
+{% block content %}
+
+<body background="{% static 'core/img/wall3.png' %}" style="background-size: cover; background-attachment: fixed;" topmargin="100pt">
+  <br><br><br>
+    {% include 'services/services_formulario.html' with btn_description='Crear Servicio' %}
+{% endblock %}

@@ -1,0 +1,108 @@
+@font-face{
+    font-family: tipografia;
+    src: url(game-of-thrones.ttf);
+}
+nav, h1, h3, h4, h5{
+    font-family: tipografia;
+}
+#principal {
+    position: relative;
+    background: url(../img/fondo1.png);
+    min-height: 755px;
+    min-width: 500px;
+    margin-bottom: 0;
+    padding-bottom: 50;
+    padding-top: 500;
+    
+            }
+    #principal .primary-overlay {
+      top: 0;
+      bottom: 100;
+      left: 0;
+      right: 500;
+      text-align: center;
+                                 }
+
+#showcase{
+    padding-top: 130px;
+    align-items: center;
+}
+
+#showcase2{
+    padding-top: 250px;
+    
+}
+
+#houses {
+    position: relative;
+    background: url("../img/westeros2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0 -500;
+    background-size: 2100px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#houses .card{
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+    border-color: black;
+}
+
+#daenerys{
+    background-size: 1000;
+    background-color: rgb(75, 12, 12);
+    
+}
+
+#eddard{
+    background-size: 1000;
+    background-color: gray;
+    
+}
+
+#tyrion{
+    background-size: 1000;
+    background-color: #990000;
+    
+}
+
+#jon{
+    background-size: 1000;
+    background-color: rgba(255, 255, 255, 0.699);
+    
+}
+
+#locations a{
+    color: white;
+    text-decoration: none;
+}
+
+#locations .card-body,
+#locations .card-header {
+  background: #333;
+}
+
+#locations .card {
+    border: #444;
+  }
+
+#page header{
+    margin-top: 500px important!;
+    color:red;
+}
+
+#llenar{
+    padding: 0px;
+}
+
+#Summ {
+    padding: 20pt; 
+}
+
+.bg-faded {
+    background-color: black;
+  }

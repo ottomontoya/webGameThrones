@@ -1,0 +1,90 @@
+  {% extends 'core/base.html' %}
+  {% block content %}
+  {% load static %}
+
+</head>
+<body background="{% static 'core/img/worldmap.jpg' %}" style="background-size: cover; background-repeat: no-repeat;">
+        
+<br><br><br><br>
+    <section id="mapa">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-6 text-white" style="width: 0;">
+                        <h3>Got World Map</h3>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- location data -->
+    <section id="locations" class="p-1 m-5 bg-dark text-white">
+        <div id="Summ" class="container">
+          <h1 class="text-center">Main Plot</h1>
+          <hr />
+          <p>
+              Years after a rebellion spurred by a stolen bride to be and the blind ambitions of a mad King, Robert of the house Baratheon 
+              sits on the much desired Iron Throne. In the mythical land of Westeros, nine noble families fight for every inch of control 
+              and every drop of power. The King's Hand, Jon Arryn, is dead. And Robert seeks out his only other ally in all of Westeros, 
+              his childhood friend Lord Eddard Stark. The solemn and honorable Warden of the North is tasked to depart his frozen 
+              sanctuary and join the King in the capital of King's Landing to help the now overweight and drunk Robert rule. However, a 
+              letter in the dead of night informs "Ned" that the former Hand was murdered, and that Robert will be next. So noble Ned goes 
+              against his better desires in an attempt to save his friend and the kingdoms. But political intrigue, plots, murders, and 
+              sexual desires lead to a secret that could tear the Seven Kingdoms apart. And soon Eddard will find out what happens when 
+              you play the Game of Thrones. All the while an ancient evil reawakens on the far north far beyond the Wall.
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="accordion">
+                <!--
+                <div class="card"> 
+                  <div class="card-header">
+                    <h5 class="mb-0">
+                      <a
+                        href="#westeros"
+                        
+                        data-parent="accordion"
+                        >Westeros</a
+                      >
+                    </h5>
+                  </div>
+                  <div id="westeros" class="collapse show">
+                    <div class="card-body">
+                      This is the stage where we can find most of the characters, also known as the Seven Kingdoms
+                    </div>
+                  </div>
+                </div>
+                  -->
+                
+            
+          </div>
+        </div>
+      </section>
+<!--
+  <section class="page-section about-heading">
+    <div class="container">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src=" {% static 'core/img/worldmap.jpg' %} " alt="">
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-9 col-lg-10 mx-auto">
+            <div class="bg-faded rounded p-5">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-lower">Brief history of Game of Thrones</span>
+              </h2>
+              <p>Fundada en 1973 consectetur adipiscing elit. Donec leo dui, vehicula vel dapibus ac, tempus non enim.
+                Nunc tempor vel lacus vel gravida. Nam sit amet pellentesque mi. </p>
+              <p>Curabitur efficitur pellentesque tellus nec volutpat. In viverra mattis sem, facilisis condimentum mi
+                rutrum ut. Quisque ut pellentesque dui.Nullam eu vehicula metus. Pellentesque id interdum elit. Aenean
+                in efficitur enim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+  {% endblock %}

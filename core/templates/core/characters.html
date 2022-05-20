@@ -1,0 +1,109 @@
+  {% extends 'core/base.html' %}
+  {% block content %}
+  {% load static %}
+    <br><br><br>
+    <section id="daenerys" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img
+                        src="{% static 'core/img/dany.jpg' %}"
+                        alt=""
+                        class="img-fluid mb-0 rounded-circle"
+                    />
+                </div>
+                <div class="col-md-6 text-white align-self-center">
+                    <h3>
+                    <img src="{% static 'core/img/Targaryen.png' %}" align="center" width="100" height="100"/>
+                    Daenerys Targaryen
+                    </h3> 
+                    <p>
+                       Princess Daenerys Targaryen, also known as Daenerys Stormborn is the daughter of the Mad king and the younger 
+                       sister of Viserys. A young woman in her early teens, Daenerys has the classical Valyrian look; She has violet 
+                       eyes, pale skin, and long, pale silver-gold hair. She and her brother are last members of House Targaryens and they now
+                       live on the run beetween the Free Cities of Essos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eddard" class="py-3">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-6 text-dark align-self-center">
+                    <h3>
+                    <img src="{% static 'core/img/stark.png' %}" align="center" width="100" height="100"/>
+                    Eddard Stark</h3>
+                    <p>
+                       Lord of Winterfell and Warden of the North, he comes from an old an respected house, the blood of the first men flows 
+                       through the veins of his family and they still keep the Old gods, childhood friend of King Robert and supporter of his
+                       rebellion against the Mad King.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img
+                        src="{% static 'core/img/edd.jpg' %}"
+                        alt=""
+                        class="img-fluid mb-0 rounded-circle"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tyrion" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img
+                        src="{% static 'core/img/tyr.jpg' %}"
+                        alt=""
+                        class="img-fluid mb-0 rounded-circle"
+                    />
+                </div>
+                <div class="col-md-6 text-white align-self-center">
+                    <h3>
+                    <img src="{% static 'core/img/Lannister.png' %}" align="center" width="100" height="100"/>
+                    Tyrion Lannister</h3>
+                    <p>
+                       Son of Tywin and heir to Castely Rock since his sister is the queen and his older brother Jaime is a sworn brother of
+                       the Kingsguard, Tyrion is a dwarf with stunted legs, stubby fingers, and a jutting forehead. He has mismatched eyes 
+                       of green and black, so rumors spread that he has an "evil eye". Tyrion's thin hair is fair and flaxen, so blond it 
+                       can appear white.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="jon" class="py-3">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-6 text-dark align-self-center">
+                    <h3>Jon Snow</h3>
+                    <p>
+                       Bastard son of Eddard Stark, raised along the Stark children in Winterfell in account of his noble blood, 
+                       Jon has more Stark-like features than any of his half-brothers. He is graceful and quick, and has a lean build.
+                       He also has the long face of the Starks, with dark, brown hair and grey eyes so dark they almost seem black.
+                       Jon resembles his father, Lord Eddard Stark. Because he looks so much like a Stark, Tyrion Lannister notes that 
+                       whoever Jon's mother was, she left little of herself in her son's appearance.[11] Out of all the Stark children, 
+                       Arya Stark is said to resemble Jon the most, as Robb, Sansa, Bran and Rickon take after their Tully mother, Catelyn.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img
+                        src="{% static 'core/img/jon.jpg' %}"
+                        alt=""
+                        class="img-fluid mb-0 rounded-circle"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+
+  {% endblock %}
